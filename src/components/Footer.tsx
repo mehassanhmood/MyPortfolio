@@ -6,6 +6,9 @@ import {
     RxEnvelopeClosed
   } from "react-icons/rx";
 
+// import {faH} from ""
+
+
 const Footer = () => {
   return (
     <div className='text-gray-200 w-full h-full bg-transparent shadow-lg p-[15px]'>
