@@ -9,13 +9,11 @@ const Navbar = () => {
             <a href="#about-me"
             className='h-auto w-auto flex flex-row items-center'
             >
-                {/* <img src="/NavLogo.png" alt="logo"
-                className='hover:animate-spin-slow h-[70px] w-[70px]'
-                 /> */}
-                 <img src="/h-solid.svg" alt="logo"
-                className='hover:animate-spin-slow w-8 h-8 border rounded-lg bg-purple-500 h-[70px] w-[70px]'
-                 />
-                <span className='font-bold ml-[10px] hidden md:block text-gray-300'>
+                 <div className='hover:animate-spin-slow pr-2'>
+                  <p className='Welcome-text'>HM</p>
+                 </div>
+
+                <span className='font-bold ml-[10px] hidden md:block text-gray-300 pl-2'>
                     Hassan Mehmood
                 </span>
             </a>
