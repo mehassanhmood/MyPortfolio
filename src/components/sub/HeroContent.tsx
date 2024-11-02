@@ -15,14 +15,15 @@ const HeroContent = () => {
       <div
       className='flex flex-col h-full w-full text-start gap-5 justify-center m-auto'
       >
+ 
         <motion.div
         variants={slideInFromTop}
-        className='Welcome-box py-[8px] px-[8px] pl-[2px] border border-[#7042f88b] opacity-[0.9]'
-        >
-            <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'/>
-            <h1 className='Welcome-text text-[13px]'>
-                Full Stack Data Scientist
-            </h1>
+        className='Welcome-box py-[8px] px-[8px] pl-[5px] border border-[#7042f88b] opacity-[0.9]'
+        >          
+          <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'/>
+          <h1 className='Welcome-text text-[17px]'>
+              Full Stack Data Scientist
+          </h1>
         </motion.div>
 
         <motion.div
@@ -60,10 +61,12 @@ const HeroContent = () => {
         className='flex justify-center w-full h-full items-center'
         >
           <img 
+          // src={"/mainIconsdark.svg"}
           src={"/mainIconsdark.svg"}
           alt='work Icons'
-          width={650}
-          height={650}
+          width={750}
+          height={750}
+          className='opacity-[0.8]'
           />
         </motion.div>
     </motion.div>

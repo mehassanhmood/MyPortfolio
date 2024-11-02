@@ -1,6 +1,11 @@
 // @ts-nocheck
 import React from 'react'
-import { Socials } from "../constants/index"
+// import { Socials } from "../constants/index"
+import {
+  RxGithubLogo,
+  RxLinkedinLogo,
+  RxEnvelopeClosed
+} from "react-icons/rx";
 
 const Navbar = () => {
   return (
@@ -32,16 +37,16 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <img
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))}
+        <div className="flex flex-row gap-5 pt-6">
+          <a href="https://github.com/mehassanhmood" target="_blank" className='text-gray-200 hover:text-purple-300 cursor-pointer'>
+          <RxGithubLogo />
+          </a>
+          <a href="https://www.linkedin.com/in/15-hassanmehmood/" target='_blank' className='text-gray-200 hover:text-purple-300 cursor-pointer'>
+          <RxLinkedinLogo />
+          </a>
+          <a href="mailto:mehassanhmood@gmail.com" className='text-gray-200 hover:text-purple-300 cursor-pointer'>
+            <RxEnvelopeClosed/>
+          </a>
         </div>
 
         </div>
