@@ -1,8 +1,10 @@
-// @ts-ignore
+// @ts-nocheck
 import { useState } from 'react'
 import Hero from './components/Hero'
 import StarsCanvas from './components/StarBackground'
+
 import './App.css'
+
 import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 import Encryption from './components/Encryption'
@@ -19,11 +21,11 @@ function App() {
         <Navbar/>
         <Hero />
         <Skills />
-        <Encryption />
         <Projects />
+
         <Footer />
       </div>
-    </div>
+     </div>
   )
 }
 

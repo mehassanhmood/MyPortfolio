@@ -1,10 +1,12 @@
 // @ts-nocheck
-import React from 'react'
+import React, {useState} from 'react'
 import SkillText from './sub/SkillText'
 import { Skill_data, Frontend_skill, Backend_skill, Full_stack, Other_skill } from '../constants'
 import SkillDataProvider from './sub/SkillDataProvider'
 
 const Skills = () => {
+    const [count, setCounter] = useState(0)
+
   return (
     <div
     id='skills'
@@ -72,21 +74,6 @@ const Skills = () => {
                  />
             ))}
         </div>
-
-        <div className='w-full h-full absolute'>
-            <div className='w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover'>
-                <video 
-                className='w-full h-auto'
-                src="/cards-video.webm"
-                preload='false'
-                loop
-                autoPlay
-                muted
-                playsInline
-                 />
-            </div>
-        </div>
-
     </div>
   )
 }
