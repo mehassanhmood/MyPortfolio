@@ -62,7 +62,7 @@ const HeroContent = () => {
         >
           <img 
           // src={"/mainIconsdark.svg"}
-          src={"/mainIconsdark.svg"}
+          src={"./mainIconsdark.svg"}
           alt='work Icons'
           width={750}
           height={750}
