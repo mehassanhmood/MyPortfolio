@@ -1,28 +1,49 @@
 // @ts-nocheck
-import React from 'react'
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion';
+
+const ProjectCard = ({ src, title, description }) => {
+
+  const [isExpanded, setIsExpanded] = useState(false);
 
 
-interface Props {
-    src: string;
-    title: string;
-    description: string;
-}
+  // Define the maximum length to show before truncating
+  const MAX_LENGTH = 50;
+  // Check if the description exceeds the limit
+  const shouldTruncate = description.length > MAX_LENGTH;
 
-const ProjectCard = ({ src, title, description }:Props) => {
   return (
-    <div className='relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]'>
+
+    <motion.div 
+    className='relative w-[400px] overflow-hidden text-wrap rounded-lg shadow-lg border border-[#2A0E61] m-2'
+    >
 
       <img src={src} alt={title}
-      width={1000}
-      height={1000}
-      className='w-full object-contain'
+      width={400}
+      height={400}
+
+      className=' object-contain'
        />
 
-        <div className='relative p-4'>
+        <div className='relative p-4 flex flex-col items-baseline'>
             <h1 className='text-white font-semibold text-2xl'>{title}</h1>
-            <p className='text-gray-300 mt-2'>{description}</p>
+            <p className='relative text-gray-300 mt-2'>
+          {shouldTruncate && !isExpanded
+            ? `${description.slice(0, MAX_LENGTH)}...`
+            : description}
+        </p>
+
+        {/* Show the "Read More" button only if truncation is needed */}
+        {shouldTruncate && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className='mt-2 text-purple-400 hover:underline text-sm'
+          >
+            {isExpanded ? 'Read Less' : 'Read More'}
+          </button>
+        )}
         </div>
-    </div>
+    </motion.div>
   )
 }
 

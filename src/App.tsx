@@ -20,9 +20,8 @@ function App() {
         <StarsCanvas />
         <Navbar/>
         <Hero />
-        <Skills />
         <Projects />
-
+        <Skills />
         <Footer />
       </div>
      </div>

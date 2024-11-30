@@ -1,17 +1,36 @@
 // @ts-nocheck
-import React from 'react'
+import React  from 'react'
+import { motion } from 'framer-motion';
 
-const ProjectsMenu = () => {
+const ProjectsMenu = ({isActive, setIsActive}) => {
+  
+
+  const menuItems = [
+    "Data Visualization",
+    "Data Science",
+    "Data Engineering",
+    "Data Analytics",
+  ];
+
   return (
-    <nav className='menu'>
-        <ul>
-            <li>Data Visualization</li>
-            <li>Data Science</li>
-            <li>Data Engineering</li>
-            <li>Data Analytics</li>
-            <li>Web Apps</li>
-        </ul>
-    </nav>
+    <motion.nav className='menu'
+    initial={{ opacity: 0 }}
+    animate ={{opacity: 1}}
+    exit={{opacity:0 , x:-20}}
+    transition={{staggerChildren:0.3, duration:0.5}}
+    >
+       <motion.ul>
+            {
+              menuItems.map((item, index) => (
+                <li key={index}
+                onClick={()=>setIsActive(item)}
+                className={`cursor-pointer p-2 mx-2 my-1 rounded-md ${isActive === item ? "bg-purple-700/50 " : "hover:bg-purple-300/50 hover:bg-opacity-50 hover:text-white"}`}>
+                  {item}
+                </li>
+              ))
+            }
+        </motion.ul>
+    </motion.nav>
   )
 }
 
