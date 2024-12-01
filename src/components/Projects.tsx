@@ -28,17 +28,18 @@ const Projects = () => {
 
         <div className="h-full flex flex-col justify-center items-center w-[20%]">
             <button
-            className= {`flex z-20 justify-center border border-4 border-indigo-500 rounded-full text-xs text-transparent items-center relative bg-clip-text bg-cyan-500 backdrop-blur-lg hover:opacity-70  mx-2 mb-[2] p-7 w-[20px] h-[25px] transition-transfrom duration-200 ${
+            className= {`flex z-20 justify-center border border-4 border-indigo-500 rounded-full md:text-xs text-transparent items-center relative bg-clip-text bg-cyan-500 backdrop-blur-lg hover:opacity-70  mx-2 mb-[2] p-7  w-[10px] h-[10px] md:w-[20px] md:h-[25px] transition-transfrom duration-200 ${
               isOpen ? "translate-y-0" : "translate-y-10"
             } `}
             onClick={() => setIsOpen(!isOpen)}
             >
-              Projects
+              <span className='hidden sm:block'>Projects</span>
+              <span className='block sm:hidden font-bold text-xl'>P</span>
             </button>
 
             {/* Side Bar */}
           <div
-            className={`relative z-10 left-0  bg-clip-text text-transparent bg-gradient-to-r from-purple-100  to-cyan-100 text-white mt-3 transition-transform duration-500 py-6`
+            className={`relative z-10 left-0 w-[32px] bg-clip-text text-transparent bg-gradient-to-r from-purple-100  to-cyan-100 text-white mt-3 transition-transform duration-500 py-6`
           }
             style={{ width: "80%" }}
           >
@@ -50,7 +51,8 @@ const Projects = () => {
 
         </div>
         
-        <div className=' flex flex-row justify-around text-white w-[75%]'>
+        <div  className=
+            "flex flex-col sm:flex-row sm:transition-all sm:duration-300 z-0 justify-around text-white w-[75%]" >
           <AnimatePresence>
             {
               projects[isActive]?.map((project: any, index: number) => (

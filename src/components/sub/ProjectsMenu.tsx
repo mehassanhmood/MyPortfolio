@@ -24,7 +24,11 @@ const ProjectsMenu = ({isActive, setIsActive}) => {
               menuItems.map((item, index) => (
                 <li key={index}
                 onClick={()=>setIsActive(item)}
-                className={`cursor-pointer p-2 mx-2 my-1 rounded-md ${isActive === item ? "bg-purple-700/50 " : "hover:bg-purple-300/50 hover:bg-opacity-50 hover:text-white"}`}>
+                className={`cursor-pointer p-3 mx-2 my-1 rounded-md 
+                  ${isActive === item 
+                    ? "bg-purple-700/50" 
+                    : "bg-transparent hover:bg-purple-300/50 hover:bg-opacity-50 hover:text-white text-xs md:text-md overflow-hidden"
+                  }`}>
                   {item}
                 </li>
               ))
