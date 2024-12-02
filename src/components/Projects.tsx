@@ -24,9 +24,9 @@ const Projects = () => {
         Projects
       </h1>
 
-      <div className='flex flex-row'>
+      <div className='flex flex-row w-[full]'>
 
-        <div className="h-full flex flex-col justify-center items-center w-[20%]">
+        <div className="relative h-full flex flex-col w-[30%] md:w-[20%]">
             <button
             className= {`flex z-20 justify-center border border-4 border-indigo-500 rounded-full md:text-xs text-transparent items-center relative bg-clip-text bg-cyan-500 backdrop-blur-lg hover:opacity-70  mx-2 mb-[2] p-7  w-[10px] h-[10px] md:w-[20px] md:h-[25px] transition-transfrom duration-200 ${
               isOpen ? "translate-y-0" : "translate-y-10"
@@ -39,20 +39,29 @@ const Projects = () => {
 
             {/* Side Bar */}
           <div
-            className={`relative z-10 left-0 w-[32px] bg-clip-text text-transparent bg-gradient-to-r from-purple-100  to-cyan-100 text-white mt-3 transition-transform duration-500 py-6`
-          }
-            style={{ width: "80%" }}
+            className={`relative z-10 left-0 w-[45%] bg-clip-text text-transparent bg-gradient-to-r from-purple-100  to-cyan-100 text-white mt-3 transition-transform duration-500 py-6 `}
+            style={{ width: "100%" }}
           >
+
             {isOpen && (
-            <AnimatePresence>
-              <ProjectsMenu isActive={isActive} setIsActive={setIsActive}/>
-            </AnimatePresence> )}
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3, staggerChildren:0.3 }}
+                  className="overflow-hidden"
+                >
+                  <ProjectsMenu isActive={isActive} setIsActive={setIsActive} />
+                </motion.div>
+              </AnimatePresence>
+            )}
+
           </div>
 
         </div>
         
-        <div  className=
-            "flex flex-col sm:flex-row sm:transition-all sm:duration-300 z-0 justify-around text-white w-[75%]" >
+        <div  className= {`relative  ${isOpen ? "flex-shrink" : "overflow-auto"}   flex flex-wrap shrink sm:flex-row sm:transition-all sm:duration-300 z-0 justify-center text-white sm:w-[75%] md:w-[80%] w-[70%]`} >
           <AnimatePresence>
             {
               projects[isActive]?.map((project: any, index: number) => (
@@ -68,4 +77,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

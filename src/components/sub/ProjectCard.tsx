@@ -15,7 +15,7 @@ const ProjectCard = ({ src, title, description }) => {
   return (
 
     <motion.div 
-    className='relative w-[200px] md:w-[400px] overflow-hidden text-wrap rounded-lg shadow-lg border border-[#2A0E61] m-2 ml-10 pr-3 md:m-2 '
+    className='relative w-[200px] md:w-[300px] overflow-hidden text-wrap rounded-lg shadow-lg border border-[#2A0E61] m-2 ml-10 pr-3 md:m-2 '
     >
 
       <img src={src} alt={title}

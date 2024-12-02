@@ -10,6 +10,11 @@ export const projects = {
         title: "John Snow, Cholera and Data",
         description: "The demystification of miasma",
       },
+      {
+        src: "./StoryBoarding.png",
+        title: "Human Oriented Story Telling",
+        description: "How the lives have changed because of economic changes",
+      },
     ],
     "Data Science": [
       {

@@ -44,16 +44,16 @@ const HeroContent = () => {
         variants={slideInFromLeft(0.8)}
         className='text-lg text-gray-400 my-5 max-w-[600px]'
         >
-          I&apos;m a Full Stack Data Scientist with experience in Web Application Development and Data Enginnering.
+          I&apos;m a Full Stack Data Scientist with experience in Web Application Development and Data Engineering.
           Check out my projects and skills.
         </motion.p>
 
-        <motion.a href=""
+        {/* <motion.a href=""
         variants={slideInFromLeft(1)}
         className='text-white text-center button-primary cursor-pointer py-2 border rounded-lg max-w-[200px]'
         >
           Learn More!
-        </motion.a>
+        </motion.a> */}
       </div>
 
       <motion.div
