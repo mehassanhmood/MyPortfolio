@@ -8,7 +8,7 @@ import { projects} from "./utils/projects";
 
 
 const Projects = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [isActive, setIsActive] = useState("Data Visualization");
 
 
@@ -28,7 +28,7 @@ const Projects = () => {
 
         <div className="relative h-full flex flex-col w-[30%] md:w-[20%]">
             <button
-            className= {`flex z-20 justify-center border border-4 border-indigo-500 rounded-full md:text-xs text-transparent items-center relative bg-clip-text bg-cyan-500 backdrop-blur-lg hover:opacity-70  mx-2 mb-[2] p-7  w-[10px] h-[10px] md:w-[20px] md:h-[25px] transition-transfrom duration-200 ${
+            className= {`flex z-20 justify-center border border-4 border-indigo-500 rounded-full md:text-xs text-transparent items-center relative bg-clip-text bg-cyan-500 backdrop-blur-lg hover:opacity-70  ml-10 mb-[2] p-7  w-[10px] h-[10px] md:w-[20px] md:h-[25px] transition-transfrom duration-200 ${
               isOpen ? "translate-y-0" : "translate-y-10"
             } `}
             onClick={() => setIsOpen(!isOpen)}
@@ -65,7 +65,7 @@ const Projects = () => {
           <AnimatePresence>
             {
               projects[isActive]?.map((project: any, index: number) => (
-                <ProjectCard key={index} src={project.src} title={project.title} description={project.description} />
+                <ProjectCard key={index} src={project.src} title={project.title} description={project.description} source_code={project.source_code} deployed_app={project.deployed_app}/>
               ))
             }
           </AnimatePresence>
