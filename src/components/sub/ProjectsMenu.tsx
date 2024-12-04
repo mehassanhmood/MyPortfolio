@@ -13,13 +13,9 @@ const ProjectsMenu = ({isActive, setIsActive}) => {
   ];
 
   return (
-    <motion.nav className='menu w-full'
-    initial={{ opacity: 0 }}
-    animate ={{opacity: 1}}
-    exit={{opacity:0 , x:-20}}
-    transition={{staggerChildren:0.3, duration:0.5}}
+    <nav className='menu'
     >
-       <motion.ul
+       <ul
        className='w-full'
        >
             {
@@ -35,8 +31,8 @@ const ProjectsMenu = ({isActive, setIsActive}) => {
                 </li>
               ))
             }
-        </motion.ul>
-    </motion.nav>
+        </ul>
+    </nav>
   )
 }
 

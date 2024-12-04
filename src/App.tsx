@@ -7,7 +7,6 @@ import './App.css'
 
 import Navbar from './components/Navbar'
 import Skills from './components/Skills'
-import Encryption from './components/Encryption'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 

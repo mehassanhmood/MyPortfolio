@@ -31,7 +31,7 @@ export const projects = {
         deployed_app: "https://github.com/mehassanhmood/Neural-Style-Transfer",
       },
       {
-        src: "./Vaes&Gans.webp",
+        src: "./Vaes&Gans.png",
         title: "Image Generation using VAEs and GANs",
         description: "Comparing GANs and VAEs built from scratch using the Celeb-A dataset, a widely used benchmark dataset for facial image generation.",
         source_code: "https://github.com/mehassanhmood/ComputerVision",
@@ -54,8 +54,8 @@ export const projects = {
         deployed_app: "https://github.com/mehassanhmood/BigData-Analytics",
       },
       {
-        src: "./Data-Engineering.webp",
-        title: "Seamless Data Engineering: From Integration to Insights",
+        src: "./Data-Engineering.png",
+        title: "Data Engineering: From Integration to Insights",
         description: "This project leverages a robust data ecosystem, integrating MySQL, MongoDB, PostgreSQL, Hadoop, and Spark to create seamless ETL pipelines using Apache Airflow. Business insights are derived through IBM Cognos and Tableau dashboards, offering real-time analytics and decision-making support.",
         source_code: "https://github.com/mehassanhmood/hadoop-spark-pipeline",
         deployed_app: "https://github.com/mehassanhmood/hadoop-spark-pipeline",
@@ -65,7 +65,7 @@ export const projects = {
     "Data Analytics":[
       {
         src: "./Crowd-Funding.svg",
-        title: "Crowdfunding Success Unveiled: Insights and Optimization",
+        title: "Crowdfunding: Insights and Optimization",
         description: "This project delves into crowdfunding data to uncover trends in pledges, backers, and campaign outcomes. Key findings include the dominance of U.S.-based campaigns, the optimal duration of five months, and factors influencing success rates.",
         source_code: "https://github.com/mehassanhmood/Crowdfunding",
         deployed_app: "https://github.com/mehassanhmood/Crowdfunding",
