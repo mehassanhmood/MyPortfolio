@@ -2,7 +2,7 @@
 import React from 'react'
 import {motion} from "framer-motion"
 import { SparklesIcon } from '@heroicons/react/16/solid'
-import { RxDownload } from "react-icons/rx";
+
 
 // @ts-ignore
 import { slideInFromTop, slideInFromLeft, slideInFromRight } from '../utils/motion'
