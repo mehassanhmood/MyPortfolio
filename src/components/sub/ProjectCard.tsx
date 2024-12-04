@@ -53,9 +53,9 @@ const ProjectCard = ({ src, title, description, source_code, deployed_app }) => 
         <motion.a 
   
         href={source_code}
-        className='ml-4 text-sm bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400'
+        className='ml-4 text-sm bg-clip-text text-transparent bg-gray-100'
          target='_blank' rel='noopener noreferrer'>
-          <span className=' hover:text-teal-700 hover:bg-clip-text hover:text-transparent duration-300'>
+          <span className=' hover:text-teal-700 hover:bg-clip-text duration-300'>
             Source code
           </span>
          </motion.a>

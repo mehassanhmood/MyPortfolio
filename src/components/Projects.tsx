@@ -19,8 +19,8 @@ const Projects = () => {
     
     <div 
     id='projects'
-    className='flex flex-col gap-6 my-6 py-6 h-[full] w-[full]'>
-      <h1 className='relative text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500  to-teal-500 text-center mb-12 pb-10'>
+    className='flex flex-col gap-6 my-14 py-14 mt-[200px]  h-[full] w-[full]'>
+      <h1 className='relative text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500  to-teal-500 text-center mb-12 pb-14'>
         Projects
       </h1>
 

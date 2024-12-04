@@ -11,21 +11,21 @@ import Encryption from './components/Encryption'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 
+
 function App() {
 
 
   return (
-    <div className='h-full w-full'>
-      <div className='flex flex-col gap-20 '>
+    <div className='flex flex-col gap-20 h-full w-full'>
         <StarsCanvas />
         <Navbar/>
         <Hero />
         <Projects />
         <Skills />
         <Footer />
-      </div>
      </div>
   )
 }
 
 export default App
+
