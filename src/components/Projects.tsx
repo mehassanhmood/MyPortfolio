@@ -43,19 +43,11 @@ const Projects = () => {
           <div
             className={`flex md:justify-center md:items-center md:w-auto w-max z-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-100  to-cyan-100 text-gray-100 mt-3 transition-transform duration-500 py-6 text-xs`}    
             >
+               <AnimatePresence>
                 {isOpen && (
-                  <AnimatePresence>
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      // exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.01, staggerChildren:0.3 }}
-                      className="flex text-wrap"
-                    >
                       <ProjectsMenu isActive={isActive} setIsActive={setIsActive} />
-                    </motion.div>
-                  </AnimatePresence>
                 )}
+                </AnimatePresence>
           </div>
 
         </div>
