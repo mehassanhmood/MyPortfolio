@@ -1,21 +1,30 @@
 // @ts-nocheck
 import React, { useState } from 'react'
-import { motion, AnimatePresence, spring } from 'framer-motion';
+import { motion, spring, AnimatePresence } from 'framer-motion';
 
 const ProjectCard = ({ src, title, description, source_code, deployed_app }) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
 
 
-  // Define the maximum length to show before truncating
   const MAX_LENGTH = 50;
-  // Check if the description exceeds the limit
   const shouldTruncate = description.length > MAX_LENGTH;
 
-  return (
+const containerVariants = {
+  initial: {opacity: 0 },
+  animate: {opacity:1,
+    transition: {duration:0.6}
+  },
+}
 
-    <div 
-      className='flex-col justify-content items-center relative w-auto w-max md:w-[300px] overflow-hidden text-wrap rounded-lg shadow-lg border border-[#2A0E61] m-2'
+
+  return (
+    <motion.div 
+      variants={containerVariants}
+      initial="initial"
+      animate="animate"
+      exit={"initial"}
+      className='flex-col justify-around relative w-auto w-max md:w-[300px] overflow-hidden text-wrap rounded-lg shadow-lg border border-[#2A0E61] m-2 '
       >
       <a
       
@@ -59,7 +68,8 @@ const ProjectCard = ({ src, title, description, source_code, deployed_app }) => 
             Source code
           </span>
          </a>
-    </div>
+    </motion.div>
+    
   )
 }
 

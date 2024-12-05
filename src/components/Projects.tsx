@@ -53,15 +53,15 @@ const Projects = () => {
         </div>
         
         <div  className= {`relative  ${isOpen ? "flex-shrink" : "overflow-auto"} flex flex-wrap shrink sm:flex-row sm:transition-all sm:duration-300 z-0 justify-center text-white  w-[70%] ml-10`} >
-          <AnimatePresence>
+          <AnimatePresence mode='wait'>
             {
-              projects[isActive]?.map((project: any, index: number) => (
-                <ProjectCard key={index} src={project.src} title={project.title} description={project.description} source_code={project.source_code} deployed_app={project.deployed_app}/>
-              ))
-            }
+              projects[isActive]?.map((project, index) => {
+                return <ProjectCard key={`${isActive}-${project.id || index}`} src={project.src} title={project.title} description={project.description} source_code={project.source_code} deployed_app={project.deployed_app}/>
+                  })
+              
+            }            
           </AnimatePresence>
-          </div>
-          
+        </div>  
       </div>
     </div>
   );
