@@ -19,29 +19,31 @@ const Projects = () => {
     
     <div 
       id='projects'
-      className='flex flex-col gap-6 my-14 py-14 mt-[200px]  h-[full] w-[full]'>
-      <h1 className='relative text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-500 text-center mb-12 pb-14'>
-        Projects
-      </h1>
+      className='mx-auto mt-24 flex w-full max-w-7xl flex-col gap-6 px-6 py-14 sm:px-10 lg:px-12'
+    >
+      <div className='mb-8 max-w-2xl'>
+        <p className='section-kicker'>Selected work / 01</p>
+        <h1 className='section-title mt-3 font-semibold'>Systems that make data useful.</h1>
+        <p className='mt-5 text-base leading-7 text-[#9aaead]'>A selection of experiments and shipped work across visual storytelling, machine learning, and data infrastructure.</p>
+      </div>
+      <div className='flex w-full flex-col gap-8 lg:flex-row'>
 
-      <div className='flex flex-row w-[full]'>
-
-        <div className="relative h-full flex flex-col w-[30%]">
+        <div className="relative flex h-full w-full flex-col lg:w-[24%]">
           <div className='flex w-[full] justify-center'>
             <button
-              className= {`flex w-[full] z-20 justify-center items-center border border-4 border-indigo-500 rounded-full md:text-xs text-transparent bg-clip-text bg-gray-100 backdrop-blur-lg hover:opacity-70  mb-[2] p-7  w-[10px] h-[10px] md:w-[20px] md:h-[25px] transition-transfrom duration-200 ${
+              aria-label={isOpen ? 'Hide project categories' : 'Show project categories'}
+              className= {`z-20 mx-auto flex items-center justify-center rounded-full border border-[#9fe8dc55] bg-[#102326aa] px-5 py-3 text-xs text-[#d6e5e3] backdrop-blur-lg transition duration-200 hover:border-[#9fe8dc] ${
               isOpen ? "translate-y-0" : "translate-y-10"
               } `}
               onClick={() => setIsOpen(!isOpen)}
               >
-              <span className='hidden sm:block'>Projects</span>
-              <span className='block sm:hidden font-bold text-xl'>P</span>
+              <span>{isOpen ? 'Hide categories' : 'Show categories'}</span>
             </button>
           </div>
 
             {/* Side Bar */}
           <div
-            className={`flex md:justify-center md:items-center md:w-auto w-max z-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-100  to-cyan-100 text-gray-100 mt-3 transition-transform duration-500 py-6 text-xs`}    
+            className={`z-10 mt-3 flex w-full justify-center py-2 text-xs text-gray-100 transition-transform duration-500 lg:justify-start`}    
             >
                <AnimatePresence>
                 {isOpen && (
@@ -52,7 +54,7 @@ const Projects = () => {
 
         </div>
         
-        <div  className= {`relative  ${isOpen ? "flex-shrink" : "overflow-auto"} flex flex-wrap shrink sm:flex-row sm:transition-all sm:duration-300 z-0 justify-center text-white  w-[70%] ml-10`} >
+        <div  className= {`relative ${isOpen ? "flex-shrink" : "overflow-auto"} z-0 flex w-full flex-wrap justify-center text-white sm:flex-row sm:transition-all sm:duration-300 lg:w-[76%]`} >
           <AnimatePresence mode='wait'>
             {
               projects[isActive]?.map((project, index) => {

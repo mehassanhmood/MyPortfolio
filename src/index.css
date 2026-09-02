@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,26 +7,35 @@
 
 
 :root {
-  background-color: #080014;
+  color: #e8edf2;
+  background-color: #081014;
+  font-family: "Space Grotesk", sans-serif;
+  font-synthesis: none;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(22, 112, 118, 0.16), transparent 28rem),
+    linear-gradient(135deg, #081014 0%, #0b1719 48%, #101313 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .cursive {
-  font-family:  "Cedarville Cursive", cursive;
+  font-family: "DM Mono", monospace;
 }
 
 .Welcome-text {
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-  ),
-  linear-gradient(90.01deg , #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
-  background-blend-mode: normal, screen;
+  color: #9fe8dc;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 
@@ -36,8 +45,8 @@
   align-items: center;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  box-shadow: inset 0 -7px 11px #a48fff1f ;
-  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px rgba(159, 232, 220, 0.05);
+  border-radius: 999px;
   display: flex;
 
   position: relative;
@@ -57,4 +66,62 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.section-kicker {
+  color: #f0b35b;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: #f2f5f4;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.button-primary {
+  align-items: center;
+  background: #9fe8dc;
+  border-radius: 999px;
+  color: #071113;
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  padding: 0.85rem 1.35rem;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.button-primary:hover {
+  background: #c2fff4;
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  align-items: center;
+  border: 1px solid rgba(159, 232, 220, 0.32);
+  border-radius: 999px;
+  color: #d6e5e3;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  padding: 0.85rem 1.35rem;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.button-secondary:hover {
+  border-color: #9fe8dc;
+  color: #9fe8dc;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

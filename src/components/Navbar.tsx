@@ -9,24 +9,27 @@ import {
 
 const Navbar = () => {
   return (
-    <div className='z-50 w-full h-[65px] fixed top-0 backdrop-blur-md px-10 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417]'>
-        <div className='w-full h-full flex flex-row justify-between m-auto px-[10px]'>
+    <div className='fixed top-0 z-50 h-[72px] w-full border-b border-[#9fe8dc18] bg-[#081014cc] px-4 backdrop-blur-md sm:px-8'>
+      <div className='m-auto flex h-full w-full max-w-7xl flex-row items-center justify-between px-1'>
             <a href="#about-me"
             className='h-auto w-auto flex flex-row items-center'
             >
-                 <div className='hover:animate-spin-slow pr-2'>
-                  <p className='Welcome-text'>HM</p>
+                 <div className='pr-2'>
+                  <p className='font-mono text-[#9fe8dc]'>HM<span className='text-[#f0b35b]'>.</span></p>
                  </div>
 
-                <span className='font-bold ml-[10px] hidden md:block text-gray-300 pl-2'>
+                <span className='ml-[10px] hidden border-l border-[#9fe8dc33] pl-3 text-sm font-semibold text-gray-300 md:block'>
                     Hassan Mehmood
                 </span>
             </a>
 
-            <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between  text-xs md:text-md w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+            <div className="hidden h-full w-[360px] flex-row items-center justify-between md:flex">
+          <div className="mr-[15px] flex h-auto w-full items-center justify-between rounded-full border border-[#9fe8dc2e] bg-[#10232666] px-5 py-2 text-sm text-gray-200">
             <a href="#about-me" className="cursor-pointer">
               About me
+            </a>
+            <a href="#experience" className="cursor-pointer">
+              Experience
             </a>
             <a href="#skills" className="cursor-pointer">
               Skills
@@ -37,14 +40,14 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 pt-6">
-          <a href="https://github.com/mehassanhmood" target="_blank" className='text-gray-200 hover:text-purple-300 cursor-pointer'>
+        <div className="flex flex-row gap-4 text-lg">
+          <a aria-label="GitHub" href="https://github.com/mehassanhmood" target="_blank" rel="noreferrer" className='cursor-pointer text-gray-200 hover:text-[#9fe8dc]'>
           <RxGithubLogo />
           </a>
-          <a href="https://www.linkedin.com/in/15-hassanmehmood/" target='_blank' className='text-gray-200 hover:text-purple-300 cursor-pointer'>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/15-hassanmehmood/" target='_blank' rel="noreferrer" className='cursor-pointer text-gray-200 hover:text-[#9fe8dc]'>
           <RxLinkedinLogo />
           </a>
-          <a href="mailto:mehassanhmood@gmail.com" className='text-gray-200 hover:text-purple-300 cursor-pointer'>
+          <a aria-label="Email Hassan" href="mailto:mehassanhmood@gmail.com" className='cursor-pointer text-gray-200 hover:text-[#9fe8dc]'>
             <RxEnvelopeClosed/>
           </a>
         </div>

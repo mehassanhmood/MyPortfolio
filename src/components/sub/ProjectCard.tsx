@@ -24,7 +24,7 @@ const containerVariants = {
       initial="initial"
       animate="animate"
       exit={"initial"}
-      className='flex-col justify-around relative w-auto w-max md:w-[300px] overflow-hidden text-wrap rounded-lg shadow-lg border border-[#2A0E61] m-2 '
+      className='relative m-2 flex w-max flex-col justify-around overflow-hidden rounded-lg border border-[#9fe8dc24] bg-[#102326aa] text-wrap shadow-lg transition-colors hover:border-[#9fe8dc66] md:w-[300px]'
       >
       <a
       
@@ -37,7 +37,7 @@ const containerVariants = {
         src={src} alt={title}
         width={400}
         height={400}
-        className='object-cover w-auto' 
+        className='h-[190px] w-full object-cover' 
         />
       </a>
 
