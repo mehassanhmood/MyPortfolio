@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
 
             <div className="mb-[20px] text-[15px] text-center">
-                &copy; My Work 2024 Inc. All rights reserved
+                © Hassan Mehmood · AI/ML Engineer & Quant System Architect
             </div>
 
         </div>

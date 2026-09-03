@@ -1,5 +1,15 @@
 
 export const projects = {
+    "Quantitative AI": [
+      {
+        src: "./sentiment-analysis-trading.webp",
+        title: "Macro-Driven Equity Positioning System",
+        description: "A three-stage RAG pipeline using LangChain, Ollama, Weaviate, FRED API, and Pydantic to classify macro regimes with confidence scores, historical analogues, and actionable equity strategies.",
+        source_code: "https://github.com/mehassanhmood/Portfolio-Optimzation",
+        deployed_app: "https://github.com/mehassanhmood/Portfolio-Optimzation",
+        isArchitecturalDemo: true,
+      },
+    ],
     "Data Visualization": [
       { src: "./inflation_investments.png",  
         title: "Inflation and Investments",
@@ -13,13 +23,6 @@ export const projects = {
         description: "The demystification of miasma",
         source_code: "https://github.com/mehassanhmood/JohnSnow-CholeraScrolly",
         deployed_app: "https://mehassanhmood.github.io/JohnSnow-CholeraScrolly/"
-      },
-      {
-        src: "./StoryBoarding.png",
-        title: "Human Oriented Story Telling",
-        description: "How the lives have changed because of economic changes",
-        source_code: "https://github.com/mehassanhmood/StoryBoarding",
-        deployed_app: "https://mehassanhmood.github.io/StoryBoarding/"
       },
     ],
     "Data Science": [
@@ -37,13 +40,6 @@ export const projects = {
         source_code: "https://github.com/mehassanhmood/ComputerVision",
         deployed_app: "https://github.com/mehassanhmood/ComputerVision",
       },
-      {
-        src: "./sentiment-analysis-trading.webp",
-        title: "Sentiment Analysis for Portfolio Optimization",
-        description: "The central aim of this project is to utilize sentiment analysis to understand and predict stock market movements. The project is structured around several key objectives, emphasizing the role of sentiment analysis as a foundational element.",
-        source_code: "https://github.com/mehassanhmood/Portfolio-Optimzation",
-        deployed_app: "https://github.com/mehassanhmood/Portfolio-Optimzation",
-      },
     ],
     "Data Engineering": [
       {
@@ -59,16 +55,6 @@ export const projects = {
         description: "This project leverages a robust data ecosystem, integrating MySQL, MongoDB, PostgreSQL, Hadoop, and Spark to create seamless ETL pipelines using Apache Airflow. Business insights are derived through IBM Cognos and Tableau dashboards, offering real-time analytics and decision-making support.",
         source_code: "https://github.com/mehassanhmood/hadoop-spark-pipeline",
         deployed_app: "https://github.com/mehassanhmood/hadoop-spark-pipeline",
-      },
-    ],
-
-    "Data Analytics":[
-      {
-        src: "./Crowd-Funding.svg",
-        title: "Crowdfunding: Insights and Optimization",
-        description: "This project delves into crowdfunding data to uncover trends in pledges, backers, and campaign outcomes. Key findings include the dominance of U.S.-based campaigns, the optimal duration of five months, and factors influencing success rates.",
-        source_code: "https://github.com/mehassanhmood/Crowdfunding",
-        deployed_app: "https://github.com/mehassanhmood/Crowdfunding",
       },
     ]
     // Add other categories dynamically as needed
