@@ -1,6 +1,5 @@
 // @ts-nocheck
-import React  from 'react'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const ProjectsMenu = ({isActive, setIsActive}) => {
   
@@ -18,15 +17,15 @@ const ProjectsMenu = ({isActive, setIsActive}) => {
 
 
   const menuItems = [
+    "Quantitative AI",
     "Data Visualization",
     "Data Science",
     "Data Engineering",
-    "Data Analytics",
   ];
 
   return (
    
-      <motion.div className='menu'
+      <motion.div className='menu w-full space-y-1'
       variants={containerVariants}
       initial="initial"
       animate="final"
@@ -34,17 +33,18 @@ const ProjectsMenu = ({isActive, setIsActive}) => {
       >
               {
                 menuItems.map((item, index) => (
-                  <motion.li key={index}
+                  <motion.button key={index}
+                  type='button'
                   onClick={()=>setIsActive(item)}
                   whileTap={{scale:0.97}}
                   variants={itemsVariations}
-                  className={`cursor-pointer p-3 mx-2 my-1 rounded-md w-[140px] z-10 flex flex-wrap text-wrap bg-text-clip text-gray-100 text-xs md:text-md
+                  className={`mx-2 my-1 flex w-[calc(100%-1rem)] cursor-pointer flex-wrap rounded-xl border border-transparent p-3 text-left text-xs text-gray-100 transition-colors md:text-sm
                     ${isActive === item 
-                      ? "bg-purple-700/50" 
-                      : "bg-transparent hover:bg-purple-300/50 hover:bg-opacity-50 "
+                      ? "border-[#9fe8dc44] bg-[#9fe8dc1c] text-[#9fe8dc]" 
+                      : "bg-transparent hover:border-[#9fe8dc22] hover:bg-[#9fe8dc0d] "
                     }`}>
                     {item}
-                  </motion.li>
+                  </motion.button>
                 ))
               }
       </motion.div>

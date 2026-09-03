@@ -6,26 +6,26 @@ const experience = [
     period: 'Jul 2026 - Present',
     role: 'Founding Data Scientist',
     company: 'Book Depot Inc. · Thorold, Ontario',
-    detail: 'Architecting AI and quantitative systems, including Prism DTC, a smart price optimization system using causal inference and demand models.',
+    detail: 'Developed a dynamic pricing engine across 60K+ SKUs using Causal DML, price elasticity, sales velocity, seasonality, and inventory signals. Built behavior clustering, inventory pacing, and demand forecasting models, while delivering 15x faster ML processing through parallelized computation.',
     current: true,
   },
   {
     period: 'Sep 2025 - Jul 2026',
     role: 'Data Scientist',
     company: 'Iteration Matrix · Remote',
-    detail: 'Built predictive systems, strengthened data pipelines, and analyzed large-scale datasets for supplier mastering, ROI analysis, and audit recovery.',
+    detail: 'Architected production ML systems for Supplier Mastering, ROI attribution, and audit recovery. Reduced reporting errors from 25% to under 5% and owned MLOps across CI/CD, containerized deployments, retraining, drift detection, and monitoring.',
   },
   {
     period: 'May 2025 - Aug 2025',
     role: 'Data Science Analyst',
     company: 'EQ Bank · Toronto, Ontario',
-    detail: 'Built model performance monitoring and a multithreaded Python data quality system profiling over 1TB of SQL Server data. Reduced reporting time by more than 90%.',
+    detail: 'Built automated ETL pipelines and real-time Power BI dashboards for model performance, reducing manual reporting by 90%. Engineered a multithreaded Polars data quality system to profile and validate over 1TB of mission-critical SQL Server data.',
   },
   {
     period: 'Sep 2022 - Aug 2024',
     role: 'Instructional Specialist, Data Analytics & FinTech',
     company: 'University of Toronto · Remote',
-    detail: 'Mentored engineers and analysts in Python, SQL, machine learning, REST APIs, and financial risk modeling through applied labs and feedback.',
+    detail: 'Mentored 50+ students in data analytics, machine learning, and time series analysis. Developed Python, SQL, and TensorFlow learning materials and simplified complex AI, blockchain, and risk modeling concepts.',
   },
 ]
 
@@ -64,17 +64,21 @@ const Experience = () => (
         <p className='section-kicker'>Education & credentials</p>
         <div className='mt-5 space-y-5 text-sm'>
           <div>
-            <h3 className='font-semibold text-[#f2f5f4]'>MSc, Business Analytics & AI</h3>
-            <p className='mt-1 text-[#9aaead]'>Ontario Tech University · 2024 - 2025</p>
+            <h3 className='font-semibold text-[#f2f5f4]'>Master&apos;s, Business Analytics & AI</h3>
+            <p className='mt-1 text-[#9aaead]'>University of Ontario Institute of Technology · 2025</p>
             <p className='mt-1 font-mono text-xs text-[#f0b35b]'>3.99 / 4.3</p>
           </div>
           <div>
-            <h3 className='font-semibold text-[#f2f5f4]'>Applied AI Solutions Development</h3>
-            <p className='mt-1 text-[#9aaead]'>George Brown Polytechnic · 2023 - 2024</p>
+            <h3 className='font-semibold text-[#f2f5f4]'>A.I. Solutions Development</h3>
+            <p className='mt-1 text-[#9aaead]'>George Brown College · 2024</p>
           </div>
           <div>
-            <h3 className='font-semibold text-[#f2f5f4]'>Selected certifications</h3>
-            <p className='mt-1 leading-6 text-[#9aaead]'>IBM Data Engineering, Google Advanced Data Analytics, Transformer Models & BERT, and Financial Market Analysis.</p>
+            <h3 className='font-semibold text-[#f2f5f4]'>Additional education</h3>
+            <p className='mt-1 leading-6 text-[#9aaead]'>University of Toronto Financial Technology certificate · 2022. Bachelor&apos;s in Health Sciences, University of Health Sciences, Pakistan · 2015.</p>
+          </div>
+          <div>
+            <h3 className='font-semibold text-[#f2f5f4]'>Credentials & recognition</h3>
+            <p className='mt-1 leading-6 text-[#9aaead]'>IBM Data Engineering, IBM Full Stack Software Developer, Microsoft Azure Data Scientist Associate, EDHEC Investment Management with Python and ML. Dean&apos;s Honor List, George Brown College.</p>
           </div>
         </div>
       </aside>

@@ -23,7 +23,7 @@ const HeroContent = () => {
         >          
             <SparklesIcon className='mr-2 h-5 w-5 text-[#f0b35b]'/>
             <h1 className='Welcome-text mr-2 font-mono text-sm'>
-              AI/ML engineer / quant systems architect
+              Hassan Mehmood
           </h1>
         </motion.div>
         <motion.div
@@ -31,7 +31,8 @@ const HeroContent = () => {
         className='mt-6 flex h-auto w-auto max-w-[680px] flex-col gap-6 text-5xl font-bold leading-[0.98] text-white sm:text-6xl lg:text-7xl'
         >
           <span>
-            I build production-grade intelligence from complex data.
+            AI/ML Engineer & Quant System Architect
+            <span className='text-[#9fe8dc]'> | Founding Data Scientist</span>
           </span>
         </motion.div>
 
@@ -39,9 +40,9 @@ const HeroContent = () => {
         variants={slideInFromLeft(0.8)}
         className='my-5 max-w-[600px] text-base leading-7 text-[#9aaead] sm:text-lg'
         >
-          I&apos;m Hassan Mehmood, a Founding Data Scientist focused on AI, quantitative engineering,
-          and scalable decision systems. I bridge technical execution with business strategy,
-          from LLM agent workflows to data-intensive financial models.
+          I&apos;m Hassan Mehmood, a Data Scientist and ML Engineer with 3+ years of experience
+          delivering production ML systems, automated ETL pipelines, and BI solutions across
+          fintech and B2B environments. My work focuses on explainable, secure, and trustworthy AI.
         </motion.p>
 
         <motion.div

@@ -20,14 +20,14 @@ const SkillText = () => {
         variants={slideInFromLeft(0.5)}
         className='section-title mt-[10px] text-center font-medium'
         >
-            AI, quantitative systems, and end-to-end delivery
+            Machine learning, data platforms, and intelligent products
         </motion.div>
 
         <motion.div
         variants={slideInFromRight(0.5)}
         className='cursive mb-10 mt-[10px] text-center text-sm text-[#9aaead]'
         >
-            LangGraph · LangChain · Python · SQL · MLOps · Causal inference
+            Python · SQL · TensorFlow · PyTorch · Airflow · Power BI · MLOps · Explainable AI
         </motion.div>
 
     </div>
